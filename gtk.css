@@ -1,0 +1,179 @@
+    /* Gruvbox-material dark (medium) — GTK theme */
+
+    /* === Palette === */
+    @define-color background     #282828;
+    @define-color foreground     #d4be98;
+    @define-color black          #282828;
+    @define-color red            #ea6962;
+    @define-color green          #a9b665;
+    @define-color yellow         #d8a657;
+    @define-color blue           #7daea3;
+    @define-color magenta        #d3869b;
+    @define-color cyan           #89b482;
+    @define-color white          #d4be98;
+    @define-color bright_black   #928374;
+    @define-color bright_red     #ea6962;
+    @define-color bright_green   #a9b665;
+    @define-color bright_yellow  #d8a657;
+    @define-color bright_blue    #7daea3;
+    @define-color bright_magenta #d3869b;
+    @define-color bright_cyan    #89b482;
+    @define-color bright_white   #d4be98;
+
+    /* === Surface levels (gruvbox-material bg0–bg4) === */
+    @define-color surface0  #282828;  /* base bg */
+    @define-color surface1  #32302f;  /* slightly raised: cards, headers */
+    @define-color surface2  #3c3836;  /* sidebars, inactive tabs */
+    @define-color surface3  #45403d;  /* borders, dividers */
+    @define-color surface4  #504945;  /* subtle highlights, hover bg */
+
+    /* === Semantic roles === */
+    @define-color accent_bg_color       @blue;
+    @define-color accent_fg_color       @background;
+    @define-color accent_color          @blue;
+
+    @define-color window_bg_color       @surface0;
+    @define-color window_fg_color       @foreground;
+
+    @define-color view_bg_color         @surface0;
+    @define-color view_fg_color         @foreground;
+
+    @define-color sidebar_bg_color      @surface2;
+    @define-color sidebar_fg_color      @foreground;
+    @define-color sidebar_backdrop_color @surface1;
+    @define-color sidebar_shade_color   @surface3;
+
+    @define-color headerbar_bg_color    @surface1;
+    @define-color headerbar_fg_color    @foreground;
+    @define-color headerbar_backdrop_color @surface0;
+    @define-color headerbar_shade_color @surface3;
+
+    @define-color card_bg_color         @surface1;
+    @define-color card_fg_color         @foreground;
+
+    @define-color popover_bg_color      @surface1;
+    @define-color popover_fg_color      @foreground;
+
+    @define-color dialog_bg_color       @surface1;
+    @define-color dialog_fg_color       @foreground;
+
+    @define-color destructive_bg_color  @red;
+    @define-color destructive_fg_color  @background;
+
+    @define-color success_bg_color      @green;
+    @define-color success_fg_color      @background;
+
+    @define-color warning_bg_color      @yellow;
+    @define-color warning_fg_color      @background;
+
+    @define-color error_bg_color        @red;
+    @define-color error_fg_color        @background;
+
+    @define-color borders               @surface3;
+
+    /* === Legacy GTK3 theme vars === */
+    @define-color theme_fg_color                    @foreground;
+    @define-color theme_text_color                  @foreground;
+    @define-color theme_bg_color                    @surface0;
+    @define-color theme_base_color                  @surface0;
+    @define-color theme_selected_bg_color           @blue;
+    @define-color theme_selected_fg_color           @background;
+    @define-color insensitive_bg_color              @surface1;
+    @define-color insensitive_fg_color              @bright_black;
+    @define-color insensitive_base_color            @surface0;
+    @define-color theme_unfocused_fg_color          @foreground;
+    @define-color theme_unfocused_text_color        @foreground;
+    @define-color theme_unfocused_bg_color          @surface0;
+    @define-color theme_unfocused_base_color        @surface0;
+    @define-color theme_unfocused_selected_bg_color @surface2;
+    @define-color theme_unfocused_selected_fg_color @foreground;
+    @define-color unfocused_insensitive_color       @bright_black;
+    @define-color unfocused_borders                 alpha(@foreground, 0.08);
+    @define-color warning_color                     @yellow;
+    @define-color error_color                       @red;
+    @define-color success_color                     @green;
+    @define-color destructive_color                 @red;
+
+    @define-color content_view_bg  @surface0;
+    @define-color text_view_bg     @surface0;
+
+    /* === Component overrides === */
+
+    messagedialog {
+        background-color: @dialog_bg_color;
+    }
+
+    messagedialog label {
+        color: @dialog_fg_color;
+        font-size: 14pt;
+        font-weight: bold;
+    }
+
+    messagedialog .secondary-text {
+        font-size: 10pt;
+        font-style: italic;
+        color: @bright_black;
+    }
+
+    messagedialog button {
+        background-color: @surface2;
+        color: @foreground;
+        border: 1px solid @surface3;
+        padding: 10px;
+    }
+
+    messagedialog button:hover {
+        background-color: @blue;
+        color: @background;
+    }
+
+    banner revealer widget {
+        background: @surface2;
+        padding: 5px;
+        color: @foreground;
+    }
+
+    alertdialog.background {
+        background-color: @dialog_bg_color;
+        color: @dialog_fg_color;
+    }
+
+    alertdialog .titlebar {
+        background-color: @headerbar_bg_color;
+        color: @headerbar_fg_color;
+    }
+
+    alertdialog box {
+        background-color: @dialog_bg_color;
+    }
+
+    alertdialog label {
+        color: @dialog_fg_color;
+    }
+
+    filechooser .dialog-action-box {
+        border-top: 1px solid @surface3;
+    }
+
+    filechooser .dialog-action-box:backdrop {
+        border-top-color: @surface1;
+    }
+
+    filechooser #pathbarbox {
+        border-bottom: 1px solid @surface3;
+    }
+
+    filechooserbutton:drop(active) {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    toast {
+        background-color: @surface2;
+        color: @foreground;
+    }
+
+    toast button.circular.flat.image-button:hover {
+        color: @background;
+        background-color: @red;
+    }

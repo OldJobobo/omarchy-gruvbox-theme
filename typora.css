@@ -1,0 +1,333 @@
+@import "night/mermaid.dark.css";
+@import "night/codeblock.dark.css";
+@import "night/sourcemode.dark.css";
+
+:root {
+    --bg-color:              #282828;
+    --side-bar-bg-color:     #32302f;
+    --text-color:            #d4be98;
+
+    --select-text-bg-color:  rgba(125, 174, 163, 0.3);
+    --select-text-font-color: #d4be98;
+
+    --item-hover-bg-color:      #3c3836;
+    --item-hover-text-color:    #d4be98;
+    --control-text-color:       #928374;
+    --control-text-hover-color: #d4be98;
+    --window-border:            1px solid #45403d;
+
+    --active-file-bg-color:     #3c3836;
+    --active-file-border-color: #7daea3;
+    --active-file-text-color:   #d4be98;
+
+    --primary-color:         #7daea3;
+    --rawblock-edit-panel-bd: #3c3836;
+    --search-select-bg-color: rgba(125, 174, 163, 0.25);
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+html, body, button, input, select, textarea,
+div.code-tooltip-content {
+    color: #d4be98;
+    border-color: transparent;
+    font-family: "Inter", "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#write {
+    max-width: 914px;
+}
+
+@media only screen and (min-width: 1400px) {
+    #write { max-width: 1024px; }
+}
+@media only screen and (min-width: 1800px) {
+    #write { max-width: 1200px; }
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #3c3836;
+}
+
+.native-window #md-notification {
+    border: 1px solid #45403d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #3c3836;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "SF Pro", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h1 { color: #ea6962; }
+h2 { color: #d8a657; }
+h3 { color: #a9b665; }
+h4 { color: #7daea3; }
+h5 { color: #89b482; }
+h6 { color: #d3869b; }
+
+/* Links */
+a { color: #7daea3; }
+
+/* Horizontal rule */
+hr {
+    height: 2px;
+    border: 0;
+    background: #45403d;
+    margin: 24px 0 !important;
+}
+
+/* Code */
+code, pre, .md-fences {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    background: #3c3836;
+}
+
+code {
+    color: #89b482;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid #7daea3;
+    color: #928374;
+    background: rgba(125, 174, 163, 0.05);
+    padding-left: 12px;
+}
+
+/* Tables */
+table tr:nth-child(2n) { background: #32302f; }
+table th               { background: #3c3836; color: #d4be98; }
+table td               { border-color: #45403d; }
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb       { background: #45403d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #928374; }
+::-webkit-scrollbar-track       { background: transparent; }
+
+/* ============================================================
+   Document (#write) area
+   ============================================================ */
+
+#write {
+    color: #d4be98;
+    background: #282828;
+    padding: 2em 3em;
+}
+
+/* Inline emphasis */
+strong, b           { color: #e2cca9; font-weight: 700; }
+em, i               { color: #d4be98; font-style: italic; }
+del, s              { color: #928374; text-decoration: line-through; }
+u                   { text-decoration-color: #7daea3; }
+mark                { background: rgba(216, 166, 87, 0.3); color: #d4be98; padding: 0 3px; border-radius: 2px; }
+
+/* Inline code */
+code {
+    color: #89b482;
+    background: #3c3836;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Fenced code blocks */
+.md-fences {
+    background: #32302f;
+    border: 1px solid #45403d;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #d4be98;
+}
+
+.md-fences .code-tooltip {
+    background: #3c3836;
+    border: 1px solid #45403d;
+}
+
+/* Code block language label */
+.md-fences:before,
+.md-fences .ty-cm-lang {
+    color: #928374;
+    font-size: 0.8em;
+}
+
+/* Task lists */
+.md-task-list-item input[type=checkbox] {
+    margin-right: 6px;
+    accent-color: #7daea3;
+}
+
+.md-task-list-item.task-list-done > p {
+    color: #928374;
+    text-decoration: line-through;
+}
+
+/* Footnotes */
+.md-footnote {
+    color: #7daea3;
+    background: rgba(125, 174, 163, 0.1);
+    border-radius: 2px;
+    padding: 0 3px;
+}
+
+#write .footnote-line {
+    color: #928374;
+    font-size: 0.875em;
+    border-top: 1px solid #45403d;
+    padding-top: 8px;
+}
+
+/* YAML front matter */
+pre#write-meta-block,
+.md-meta {
+    background: #32302f;
+    border: 1px solid #45403d;
+    border-radius: 3px;
+    color: #928374;
+    padding: 8px 12px;
+    font-size: 0.875em;
+}
+
+/* Link definitions */
+.md-def-link .md-def-name  { color: #7daea3; }
+.md-def-link .md-def-title { color: #928374; }
+.md-def-link .md-def-url   { color: #89b482; }
+
+/* Images */
+#write img {
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+.md-image > .md-meta {
+    color: #928374;
+    font-size: 0.875em;
+}
+
+/* Math blocks */
+.md-math-block, .md-rawblock {
+    background: #32302f;
+    border: 1px solid #45403d;
+    border-radius: 3px;
+    padding: 8px 12px;
+}
+
+/* HTML raw blocks */
+.md-rawblock-control {
+    background: #3c3836;
+    color: #928374;
+    border-radius: 3px 3px 0 0;
+}
+
+/* Inline HTML tags */
+.md-tag { color: #928374; }
+
+/* Search highlight */
+.md-search-hit {
+    background: rgba(216, 166, 87, 0.35);
+    color: #d4be98;
+    border-radius: 2px;
+}
+
+/* ============================================================
+   Outline panel
+   ============================================================ */
+
+.outline-item {
+    color: #928374;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.outline-item:hover {
+    color: #d4be98;
+    background: #3c3836;
+}
+
+.outline-item.active,
+.outline-item:focus {
+    color: #7daea3;
+    background: rgba(125, 174, 163, 0.1);
+}
+
+/* ============================================================
+   File tree / sidebar
+   ============================================================ */
+
+.file-list-item,
+.file-node-content {
+    color: #928374;
+}
+
+.file-list-item:hover,
+.file-node-content:hover {
+    color: #d4be98;
+    background: #3c3836;
+}
+
+.file-list-item.active,
+.file-list-item.is-active,
+.file-node-content.is-active {
+    color: #d4be98;
+    background: #3c3836;
+    border-left: 2px solid #7daea3;
+}
+
+.sidebar-tab {
+    color: #928374;
+}
+
+.sidebar-tab.active,
+.sidebar-tab:hover {
+    color: #d4be98;
+    border-bottom-color: #7daea3;
+}
+
+/* ============================================================
+   Source mode syntax (CodeMirror)
+   ============================================================ */
+
+#typora-source .CodeMirror-wrap {
+    background: #282828;
+    color: #d4be98;
+}
+
+.cm-s-typora-default .cm-header          { color: #ea6962; font-weight: bold; }
+.cm-s-typora-default .cm-comment         { color: #928374; font-style: italic; }
+.cm-s-typora-default .cm-string          { color: #a9b665; }
+.cm-s-typora-default .cm-string-2        { color: #89b482; }
+.cm-s-typora-default .cm-number          { color: #d8a657; }
+.cm-s-typora-default .cm-keyword         { color: #ea6962; }
+.cm-s-typora-default .cm-operator        { color: #7daea3; }
+.cm-s-typora-default .cm-variable        { color: #d4be98; }
+.cm-s-typora-default .cm-variable-2      { color: #d3869b; }
+.cm-s-typora-default .cm-def             { color: #89b482; }
+.cm-s-typora-default .cm-tag             { color: #ea6962; }
+.cm-s-typora-default .cm-attribute       { color: #7daea3; }
+.cm-s-typora-default .cm-atom            { color: #d8a657; }
+.cm-s-typora-default .cm-meta            { color: #928374; }
+.cm-s-typora-default .cm-link            { color: #7daea3; text-decoration: underline; }
+.cm-s-typora-default .cm-url             { color: #89b482; }
+.cm-s-typora-default .cm-strong          { color: #e2cca9; font-weight: bold; }
+.cm-s-typora-default .cm-em              { color: #d4be98; font-style: italic; }
+.cm-s-typora-default .cm-strikethrough   { color: #928374; }
+.cm-s-typora-default .CodeMirror-cursor  { border-left-color: #d4be98; }
+.cm-s-typora-default .CodeMirror-selectedtext,
+.cm-s-typora-default .CodeMirror-selected { background: rgba(125, 174, 163, 0.25) !important; }

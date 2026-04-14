@@ -1,0 +1,111 @@
+/* Gruvbox Material Dark (Medium) — Obsidian Theme */
+
+.theme-dark, .theme-light {
+    /* Backgrounds — surface depth */
+    --background-primary:          #282828;
+    --background-primary-alt:      #32302f;
+    --background-secondary:        #32302f;
+    --background-secondary-alt:    #3c3836;
+    --background-modifier-border:  #45403d;
+    --background-modifier-hover:   rgba(80, 73, 69, 0.3);
+    --background-modifier-active-hover: rgba(125, 174, 163, 0.1);
+
+    /* Text */
+    --text-normal:   #d4be98;
+    --text-muted:    #928374;
+    --text-faint:    rgba(212, 190, 152, 0.45);
+    --text-on-accent: #282828;
+
+    /* Selection */
+    --text-selection:       rgba(125, 174, 163, 0.25);
+    --text-highlight-bg:    rgba(216, 166, 87, 0.25);
+
+    /* Accent */
+    --interactive-accent:          #7daea3;
+    --interactive-accent-hover:    #8dbdb2;
+    --text-accent:                 #7daea3;
+    --text-accent-hover:           #8dbdb2;
+    --text-link:                   #7daea3;
+
+    /* Headings — gruvbox-material color sequence */
+    --text-title-h1: #ea6962;
+    --text-title-h2: #d8a657;
+    --text-title-h3: #a9b665;
+    --text-title-h4: #7daea3;
+    --text-title-h5: #89b482;
+    --text-title-h6: #d3869b;
+
+    /* Code */
+    --code-normal:     #89b482;
+    --code-background: #3c3836;
+    --code-comment:    #928374;
+    --code-tag:        #ea6962;
+    --code-string:     #a9b665;
+    --code-value:      #d8a657;
+    --code-keyword:    #ea6962;
+    --code-operator:   #7daea3;
+    --code-property:   #7daea3;
+    --code-important:  #e78a4e;
+
+    /* Semantic */
+    --text-error:        #ea6962;
+    --text-error-hover:  #ea6962;
+    --text-success:      #a9b665;
+    --text-warning:      #d8a657;
+
+    /* Tags */
+    --tag-color:       #89b482;
+    --tag-background:  rgba(137, 180, 130, 0.15);
+    --tag-border-color: rgba(137, 180, 130, 0.4);
+
+    /* Graph */
+    --graph-line:             #45403d;
+    --graph-node:             #7daea3;
+    --graph-node-focused:     #d4be98;
+    --graph-node-tag:         #89b482;
+    --graph-node-attachment:  #a9b665;
+    --graph-node-unresolved:  #928374;
+}
+
+/* Headers */
+.cm-header-1, .markdown-rendered h1 { color: var(--text-title-h1); }
+.cm-header-2, .markdown-rendered h2 { color: var(--text-title-h2); }
+.cm-header-3, .markdown-rendered h3 { color: var(--text-title-h3); }
+.cm-header-4, .markdown-rendered h4 { color: var(--text-title-h4); }
+.cm-header-5, .markdown-rendered h5 { color: var(--text-title-h5); }
+.cm-header-6, .markdown-rendered h6 { color: var(--text-title-h6); }
+
+/* Inline code */
+.markdown-rendered code {
+    color: var(--code-normal);
+    background: var(--code-background);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Blockquotes */
+.markdown-rendered blockquote {
+    border-left: 3px solid #7daea3;
+    color: #928374;
+}
+
+/* Links */
+.markdown-rendered a { color: var(--text-link); }
+
+/* Syntax highlighting */
+.cm-s-obsidian span.cm-keyword   { color: #ea6962; }
+.cm-s-obsidian span.cm-string    { color: #a9b665; }
+.cm-s-obsidian span.cm-number    { color: #d8a657; }
+.cm-s-obsidian span.cm-comment   { color: #928374; font-style: italic; }
+.cm-s-obsidian span.cm-operator  { color: #7daea3; }
+.cm-s-obsidian span.cm-def       { color: #89b482; }
+.cm-s-obsidian span.cm-builtin   { color: #e78a4e; }
+.cm-s-obsidian span.cm-variable  { color: #d4be98; }
+.cm-s-obsidian span.cm-atom      { color: #d3869b; }
+
+/* Active/selected elements */
+.workspace-leaf.mod-active .workspace-leaf-header-title,
+.nav-file-title.is-active,
+.search-result-file-title {
+    color: var(--interactive-accent);
+}

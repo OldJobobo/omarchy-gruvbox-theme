@@ -1,0 +1,81 @@
+:root {
+    /* Accent */
+    --adw-accent-bg-rgb:  125, 174, 163 !important;  /* #7daea3 */
+    --adw-accent-fg-rgb:  40, 40, 40    !important;  /* #282828 */
+    --adw-accent-rgb:     125, 174, 163 !important;
+
+    /* Destructive */
+    --adw-destructive-bg-rgb: 234, 105, 98  !important;  /* #ea6962 */
+    --adw-destructive-fg-rgb: 212, 190, 152 !important;  /* #d4be98 */
+    --adw-destructive-rgb:    234, 105, 98  !important;
+
+    /* Success */
+    --adw-success-bg-rgb: 169, 182, 101 !important;  /* #a9b665 */
+    --adw-success-fg-rgb: 60, 56, 54    !important;  /* #3c3836 */
+    --adw-success-rgb:    169, 182, 101 !important;
+
+    /* Warning */
+    --adw-warning-bg-rgb: 216, 166, 87 !important;  /* #d8a657 */
+    --adw-warning-fg-rgb: 40, 40, 40   !important;
+    --adw-warning-fg-a:   0.9          !important;
+    --adw-warning-rgb:    216, 166, 87 !important;
+
+    /* Error */
+    --adw-error-bg-rgb: 234, 105, 98 !important;
+    --adw-error-fg-rgb: 60, 56, 54   !important;
+    --adw-error-rgb:    234, 105, 98 !important;
+
+    /* Window — bg0 */
+    --adw-window-bg-rgb: 40, 40, 40    !important;  /* #282828 */
+    --adw-window-fg-rgb: 212, 190, 152 !important;  /* #d4be98 */
+
+    /* Views — bg2 */
+    --adw-view-bg-rgb: 60, 56, 54    !important;  /* #3c3836 */
+    --adw-view-fg-rgb: 212, 190, 152 !important;
+
+    /* Headerbar — bg1 */
+    --adw-headerbar-bg-rgb:           50, 48, 47 !important;  /* #32302f */
+    --adw-headerbar-fg-rgb:           212, 190, 152 !important;
+    --adw-headerbar-border-rgb:       69, 64, 61  !important;  /* #45403d */
+    --adw-headerbar-backdrop-rgb:     60, 56, 54  !important;
+    --adw-headerbar-shade-rgb:        0, 0, 0     !important;
+    --adw-headerbar-shade-a:          0.25        !important;
+    --adw-headerbar-darker-shade-rgb: 0, 0, 0     !important;
+    --adw-headerbar-darker-shade-a:   0.8         !important;
+
+    /* Sidebars — bg1 */
+    --adw-sidebar-bg-rgb:                    50, 48, 47   !important;
+    --adw-sidebar-fg-rgb:                    212, 190, 152 !important;
+    --adw-sidebar-backdrop-rgb:              69, 64, 61   !important;
+    --adw-sidebar-shade-rgb:                 0, 0, 0      !important;
+    --adw-sidebar-shade-a:                   0.25         !important;
+    --adw-secondary-sidebar-bg-rgb:          50, 48, 47   !important;
+    --adw-secondary-sidebar-fg-rgb:          212, 190, 152 !important;
+    --adw-secondary-sidebar-backdrop-rgb:    69, 64, 61   !important;
+    --adw-secondary-sidebar-shade-rgb:       0, 0, 0      !important;
+    --adw-secondary-sidebar-shade-a:         0.25         !important;
+
+    /* Cards — bg2 */
+    --adw-card-bg-rgb:    60, 56, 54 !important;
+    --adw-card-bg-a:      1.0        !important;
+    --adw-card-fg-rgb:    212, 190, 152 !important;
+    --adw-card-shade-rgb: 0, 0, 0   !important;
+    --adw-card-shade-a:   0.25      !important;
+
+    /* Dialogs — bg1 */
+    --adw-dialog-bg-rgb: 50, 48, 47    !important;
+    --adw-dialog-fg-rgb: 212, 190, 152 !important;
+
+    /* Popovers — bg1 */
+    --adw-popover-bg-rgb:    50, 48, 47 !important;
+    --adw-popover-fg-rgb:    212, 190, 152 !important;
+    --adw-popover-shade-rgb: 0, 0, 0   !important;
+    --adw-popover-shade-a:   0.25      !important;
+
+    /* Thumbnails */
+    --adw-thumbnail-bg-rgb: 50, 48, 47 !important;
+
+    /* Misc */
+    --adw-shade-rgb: 0, 0, 0 !important;
+    --adw-shade-a:   0.25    !important;
+}

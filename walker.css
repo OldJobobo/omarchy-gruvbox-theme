@@ -1,0 +1,170 @@
+/* Gruvbox Material Dark (Medium) — Walker Theme */
+
+/* === Palette === */
+@define-color bg0      #282828;
+@define-color bg1      #32302f;
+@define-color bg2      #3c3836;
+@define-color bg3      #45403d;
+@define-color bg4      #504945;
+@define-color fg       #d4be98;
+@define-color fg-dim   #928374;
+@define-color accent   #7daea3;
+@define-color red      #ea6962;
+@define-color green    #a9b665;
+@define-color yellow   #d8a657;
+@define-color cyan     #89b482;
+@define-color magenta  #d3869b;
+
+/* === Omarchy theme hook variables === */
+@define-color selected-text @accent;
+@define-color text          @fg;
+@define-color base          @bg0;
+@define-color border        @bg3;
+@define-color foreground    @fg;
+@define-color background    @bg0;
+
+/* === Reset === */
+* {
+    all: unset;
+    font-family: monospace;
+    font-size: 14px;
+    color: @fg;
+}
+
+scrollbar {
+    opacity: 0;
+}
+
+/* === Icons === */
+.normal-icons { -gtk-icon-size: 16px; }
+.large-icons  { -gtk-icon-size: 28px; }
+
+/* === Outer window === */
+.box-wrapper {
+    background:    @bg1;
+    border:        1px solid @bg3;
+    border-radius: 6px;
+    padding:       8px;
+}
+
+/* === Search bar === */
+.search-container {
+    background:    @bg2;
+    border:        1px solid @bg3;
+    border-radius: 4px;
+    padding:       4px 12px;
+    margin-bottom: 6px;
+}
+
+.input {
+    color:       @fg;
+    caret-color: @accent;
+    background:  transparent;
+}
+
+.input placeholder {
+    color:   @fg-dim;
+    opacity: 1;
+}
+
+/* === Results list === */
+.list {
+    color: @fg;
+}
+
+/* === List items === */
+.item-box {
+    padding:       3px 10px;
+    border-left:   3px solid transparent;
+    border-radius: 3px;
+}
+
+child:hover .item-box {
+    background:  alpha(@bg3, 0.5);
+    border-left: 3px solid @bg4;
+}
+
+child:selected .item-box {
+    background:  alpha(@accent, 0.15);
+    border-left: 3px solid @accent;
+}
+
+child:selected .item-box * {
+    color: @accent;
+}
+
+/* === Item text === */
+.item-text-box {
+    padding: 4px 0;
+}
+
+.item-text {
+    color: @fg;
+}
+
+.item-subtext {
+    color:     @fg-dim;
+    font-size: 12px;
+}
+
+child:selected .item-subtext {
+    color: alpha(@accent, 0.75);
+}
+
+/* === Icon === */
+.item-image {
+    margin-right: 10px;
+}
+
+/* === Placeholder (empty state) === */
+.placeholder {
+    color: @fg-dim;
+}
+
+/* === Current indicator === */
+.current {
+    font-style: italic;
+    color:      @fg-dim;
+}
+
+/* === Keybind hints === */
+.keybind-hints {
+    background:    @bg2;
+    border-top:    1px solid @bg3;
+    border-radius: 0 0 4px 4px;
+    padding:       5px 10px;
+    margin-top:    6px;
+    color:         @fg-dim;
+    font-size:     11px;
+}
+
+.global-keybinds,
+.item-keybinds {
+    color:   @fg-dim;
+    spacing: 6px;
+}
+
+/* Key badge styling — each label inside the hints renders as a key cap */
+.global-keybinds label,
+.item-keybinds label {
+    background:    @bg3;
+    color:         @fg-dim;
+    border:        1px solid @bg4;
+    border-radius: 3px;
+    padding:       1px 5px;
+    font-size:     11px;
+    font-family:   monospace;
+}
+
+/* === Error state === */
+.error {
+    background: alpha(@red, 0.15);
+    border-left: 3px solid @red;
+    padding:     8px 12px;
+    color:       @red;
+}
+
+/* === Preview pane === */
+.preview {
+    color: @fg-dim;
+}

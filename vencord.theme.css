@@ -1,0 +1,135 @@
+/**
+ * @name midnight (gruvbox-material)
+ * @description midnight discord — gruvbox-material dark (medium) flavor.
+ * @author refact0r / omarchy-gruvbox-theme
+ * @version 2.1.1
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight-vencord.theme.css
+ */
+
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+body {
+    --font: ''; /* default discord font */
+    --code-font: '';
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    /* animations */
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    /* top bar */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    /* dms button */
+    --custom-dms-icon: off;
+    --custom-dms-background: off;
+
+    /* background */
+    --background-image: off;
+    --background-image-url: url('');
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* chatbar */
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+
+    /* other */
+    --small-user-panel: on;
+}
+
+:root {
+    --colors: on;
+
+    /* text */
+    --text-0: var(--bg-4);        /* text on colored elements */
+    --text-1: #e2cca9;            /* bright text on colored elements */
+    --text-2: #d4be98;            /* headings and important text */
+    --text-3: #d4be98;            /* normal text */
+    --text-4: #928374;            /* icon buttons and channels */
+    --text-5: rgba(212,190,152,0.35); /* muted channels and timestamps */
+
+    /* backgrounds (bg0→bg2 surface depth) */
+    --bg-1: #504945;              /* dark buttons when clicked */
+    --bg-2: #3c3836;              /* dark buttons */
+    --bg-3: #32302f;              /* spacing, secondary elements */
+    --bg-4: #282828;              /* main background */
+    --hover:    hsla(20, 3%, 40%, 0.10);
+    --active:   hsla(20, 3%, 40%, 0.20);
+    --active-2: hsla(20, 3%, 40%, 0.30);
+    --message-hover: hsla(0, 0%, 0%, 0.08);
+
+    /* accent — gruvbox-material blue */
+    --accent-1: var(--blue-1);
+    --accent-2: var(--blue-2);
+    --accent-3: var(--blue-3);
+    --accent-4: var(--blue-4);
+    --accent-5: var(--blue-5);
+    --accent-new: var(--accent-2);
+    --mention:       linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent);
+    --reply:         linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover:   linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent);
+
+    /* status */
+    --online:    var(--green-2);
+    --dnd:       var(--red-2);
+    --idle:      var(--yellow-2);
+    --streaming: var(--purple-2);
+    --offline:   var(--text-4);
+
+    /* borders */
+    --border-light:  var(--hover);
+    --border:        var(--active);
+    --border-hover:  var(--active);
+    --button-border: hsla(0, 0%, 100%, 0.1);
+
+    /* === Canonical gruvbox-material base colors === */
+
+    --red-1: #ef8079;
+    --red-2: #ea6962;
+    --red-3: #ea6962;
+    --red-4: hsl(3, 76%, 55%);
+    --red-5: hsl(3, 76%, 50%);
+
+    --green-1: #b3bc78;
+    --green-2: #a9b665;
+    --green-3: #a9b665;
+    --green-4: hsl(70, 36%, 48%);
+    --green-5: hsl(70, 36%, 43%);
+
+    --blue-1: #8dbdb2;
+    --blue-2: #7daea3;
+    --blue-3: #7daea3;
+    --blue-4: hsl(167, 24%, 50%);
+    --blue-5: hsl(167, 24%, 45%);
+
+    --yellow-1: #ddb870;
+    --yellow-2: #d8a657;
+    --yellow-3: #d8a657;
+    --yellow-4: hsl(37, 63%, 51%);
+    --yellow-5: hsl(37, 63%, 46%);
+
+    --purple-1: #dba0b3;
+    --purple-2: #d3869b;
+    --purple-3: #d3869b;
+    --purple-4: hsl(344, 47%, 61%);
+    --purple-5: hsl(344, 47%, 56%);
+}
